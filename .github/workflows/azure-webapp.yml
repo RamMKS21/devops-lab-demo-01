@@ -26,7 +26,6 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'mlops-flask-webapp01'   # must match your Azure Web App name
-        slot-name: 'production'
+        app-name: 'mlops-flask-webapp01'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
         package: .
